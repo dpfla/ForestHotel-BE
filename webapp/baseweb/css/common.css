@@ -1,0 +1,295 @@
+html, body, a, div, h1, ul, li, form, legend, label, input, nav, h2, header
+, img, h3, p, footer, section, table, tr, td{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+body {
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none
+}
+
+/*링크 스타일*/
+a:link, a:visited{
+    color: #000;
+    text-decoration: none;
+}
+
+/*기본 설정*/
+html{
+    font-size: 14px;
+}
+body {
+    font-family: 'Nanum Gothic', sans-serif;
+    color: #000;
+    background-color: #fff;
+    line-height: 1.4;
+}
+.hidden, legend{
+    display: none;
+}
+
+
+/*건너뛰기 링크*/
+.skipNav{
+    position: absolute;
+    left: -9999px;
+}
+.skipNav:focus{
+    left: 50%;
+    margin: 3px 0 0 -3rem;
+    padding: 5px 15px;
+    background-color: #000;
+    color: #fff;
+    outline: 0;
+    z-index: 10;
+    text-decoration: none;
+}
+
+/*전체 레이아웃*/
+#contentsArea,#innerFooter{
+    width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+#wrapper {
+    background-color: #fff;
+}
+
+/*헤더 영역*/
+header{
+    height: 100px;
+    width: 100%;
+    min-width: 1200px;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+header .globalMenu{
+    min-width: 1200px;
+    height: 40px;
+    background-color: #000;
+    color: #fff;
+    position: relative;
+}
+.globalMenuinner {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    box-sizing: border-box;
+}
+.globalMenuinner li {
+    float: left;
+    height: 100%;
+    font-size: 0.9rem;
+    text-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.globalMenuinner li a{
+    color: #fff;
+}
+.globalMenuinner li:not(.weather){
+    width: 140px;
+    border-left: 1px solid #666;
+    position: relative;
+    padding: 11px 0;
+}
+.globalMenuinner .weather span{
+    display: inline-block;
+    font-size: 0.75rem;
+    margin-right: 20px;
+    padding: 12px 0;
+}
+
+
+.logoMenu{
+    min-width: 1200px;
+    height: 60px;
+    background-color: #fff;
+    border-bottom: 1px solid #aaa;
+}
+.logo{
+    float: left;
+    margin: 0.25rem 0;
+}
+.logo a{
+    display: inline-block;
+    margin: 0 0.7rem;
+    font-family: 'Reem Kufi Fun', sans-serif;
+    font-weight: 500;
+    font-size: 2.7rem; 
+}
+.topMenu{
+    height: 100%;
+}
+nav{
+    float: left;
+    height: 100%;
+}
+.mainMenu {
+    font-size: 1.1rem;
+    height: 100%;
+}
+.mainMenu > li{
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    box-sizing: border-box;
+}
+.mainMenu > li:hover > a{
+    color: rgba(0, 72, 4, 0.6);
+}
+.mainMenu > li > a{
+    display: inline-block;
+    height: 44.4px;
+    margin-top: 1.2rem;
+    padding: 0.5rem 1.5rem;
+    box-sizing: border-box;
+}
+.mainMenu > li:first-child {
+    margin-left: 3rem;
+}
+.mainMenu > li > a::after {
+    content: "";
+    padding-left: 3rem;
+    border-right: 1px solid #ccc;
+}
+.mainMenu > li:last-child > a::after{
+    content: "";
+    border: none;
+}
+.underMenu {
+    display: none;
+    padding: 0 1rem;
+    position: absolute;
+    white-space: nowrap;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.underMenu > li {
+    display: inline-block;
+    padding: 0.5rem 0.4rem;
+    margin-right: 1rem;
+    font-size: 1rem;
+}
+.underMenu > li > {
+    color: #999;
+}
+.reservation{
+    float: right;
+    height: 60px;
+    width: 280px;
+    box-sizing: border-box;
+    background-color: rgb(29, 90, 32);
+    text-align: center;
+    
+}
+.reservation > a {
+    display: block;
+    color: #fff;
+    font-size: 1.2rem;
+    margin: 1.35rem 0;
+}
+.reservation::after {
+    float: none;
+}
+
+
+
+/*로그인폼*/
+.loginForm{
+    display: none;
+    z-index: 9999;
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    background-color: rgb(29, 90, 32);
+    border: 1px solid #666;
+    right: 0;
+    top:40px;
+}
+.loginForm form {
+    width: 322px;
+    margin: 0 auto;
+    color: #fff;
+}
+.loginForm form legend{
+    display: block;
+    font-size: 2.6rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.loginForm form label,input{
+    display: inline-block;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.4);
+    padding: 0.3rem;
+}
+.loginForm form label{
+    margin-top: 1rem;
+}
+.loginForm form input{
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+.loginForm form input[type="submit"]{
+    font-size: 1.2rem;
+    color: #fff;
+    width: 70%;
+    padding: 1rem 0;
+    margin: 3rem 15% 0;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 40px;
+}
+
+/*푸터*/
+footer{
+    background-color: #000;
+    height: 250px;
+
+}
+#innerFooter{
+    background-color: #000;
+    color: #aaa;
+    padding-top: 4rem;
+}
+.footerLeft{
+    float: left;
+    width: 70%;
+    margin-right: 3%;
+}
+.guide > ul > li{
+    display: inline-block;
+    padding: 0.3rem 0;
+    margin-left: 1.5rem;
+}
+.guide > ul > li:first-child {
+    margin-left: 0;
+}
+.guide > ul > li::after {
+    content: "";
+    border-right: 1px solid #666;
+    margin-left: 1.5rem;
+}
+.footerLeft > address{
+    font-style: normal;
+    margin-top: 1.5rem;
+    line-height: 2;
+}
+.footerRight .footerCS td {
+    padding: 0.3rem 0.5rem;
+}
+.footerRight .footerCS tr td:first-child {
+    font-weight: 600;
+    color: #ccc;
+}

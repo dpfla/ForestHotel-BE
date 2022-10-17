@@ -1,0 +1,182 @@
+/*메인 스와이퍼 영역*/
+.MainSwiper {
+  min-width: 1200px;
+  width: 100%;
+  height: 600px;
+  margin-top: 100px;
+}
+.MainSwiper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  position: relative;
+}
+.MainSwiper .swiper-slide > .info {
+  display: inline;
+  position: absolute;
+  text-align: left;
+  left: 30px;
+  bottom: 30px;
+}
+.MainSwiper .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-button-next, .swiper-button-prev{
+  color: #fff;
+  margin: 0 3rem;
+}
+.info{
+  margin: 4rem 8.5rem 2.5rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.8rem;
+  line-height: 2;
+  font-family: "Noto Serif KR", sans-serif;
+}
+.info h3{
+  font-weight: normal;
+  font-size: 3rem;
+}
+.info p{
+  border-top: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+
+
+/*객실 스와이퍼 영역*/
+#roomArea{
+  height: 650px;
+  margin-top: 80px;
+}
+#roomArea h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 500;
+}
+.roomSwiperArea{
+  margin: 1.8rem 0;
+}
+.RoomSwiper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-align: center;
+}
+.RoomSwiper .swiper-slide {
+  font-size: 18px;
+  background: #fff;
+  position: relative;
+  top: 5rem;
+}
+.RoomSwiper .swiper-slide .roomImage{
+  display: inline-block;
+  box-sizing: border-box;
+  width: 66%;
+  overflow: hidden;
+}
+.RoomSwiper .swiper-slide .roomImage img {
+  position: relative;
+  left: -15%;
+}
+.RoomSwiper .swiper-slide .roomInfoParah{
+  display: inline-block;
+  width: 30%;
+  height: 100%;
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  position: relative;
+  top: -80px;
+  margin: 0 1.5%;
+}
+.RoomSwiper .swiper-slide .roomInfoParah p:first-child{
+  color: #9c836a;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+.RoomSwiper .swiper-slide .roomInfoParah p:last-child{
+  color: #666;
+}
+
+.RoomSwiper .swiper-pagination {
+  position: absolute;
+  top: 0px;
+}
+.RoomSwiper .swiper-pagination-bullet {
+  display: inline;
+  text-align: center;
+  line-height: 2rem;
+  font-size: 1.1rem;
+  color: #000;
+  background-color: transparent;
+  border-radius: 0;
+  opacity: 0.5;
+}
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+  margin: 0 0;
+}
+.RoomSwiper .swiper-pagination-bullet:nth-child(2)::after, .RoomSwiper .swiper-pagination-bullet:nth-child(2)::before{
+  content: "";
+  border-right: 2px solid #bbb;
+  margin: 0 2rem;
+}
+.RoomSwiper .swiper-pagination-bullet-active {
+  opacity: 1;
+  color: rgb(0, 72, 4);
+}
+
+/*이벤트 영역*/
+#eventArea{
+  height: 650px;
+  margin-top: 80px;
+}
+#eventArea h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+#eventArea > p{
+  text-align: center;
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 50px;
+}
+.eventInfo{
+  margin: 0 auto;
+}
+.eventInfo .event{
+  display: inline-block;
+  width: 31.5%;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.eventInfo .event:nth-child(2){
+  margin: 0 2%;
+}
+.eventInfo .event .eventImg{
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+}
+.eventInfo .event:first-child img{
+  width: 100%;
+}
+.eventInfo .event:nth-child(n+2) img{
+  width: 150%;
+  position: relative;
+  left: -45%;
+}
+.event p{
+  width: 95%;
+  line-height: 1.6;
+}
+.event p:nth-child(2){
+  margin: 15px 0;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
