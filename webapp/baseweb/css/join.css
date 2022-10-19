@@ -48,7 +48,7 @@ fieldset > div > div > input{
 fieldset > div > div:first-child{
     margin-right: 3.5rem;
 }
-#joinForm .inputIdArea #userId{
+#joinForm .inputIdArea #id{
     margin-right: 2rem;
 }
 #joinForm .inputIdArea a {
@@ -57,15 +57,15 @@ fieldset > div > div:first-child{
     background-color: rgba(29, 90, 32, 0.29);
     padding: 10px 40px;
 }
-#joinForm .inputBirthArea #userBirthY{
+#joinForm .inputBirthArea #birthY{
     width: 18%;
     margin: 1rem 0.1rem;
 }
-#joinForm .inputBirthArea #userBirthM{
+#joinForm .inputBirthArea #birthM{
     width: 11.6%;
     margin: 1rem 0.1rem;
 }
-#joinForm .inputBirthArea #userBirthD{
+#joinForm .inputBirthArea #birthD{
     width: 11.6%;
     margin: 1rem 0;
 }
@@ -75,7 +75,7 @@ fieldset > div > div:first-child{
     accent-color: rgba(29, 90, 32);
     outline: none;
 }
-#joinForm .inputInfo .inputReceiveArea label[for="userInforeceiveEmail"]{
+#joinForm .inputInfo .inputReceiveArea label#userInforeceive{
     margin-right: 5rem;
 }
 #joinForm .inputInfo .inputReceiveArea #userInforeceive{

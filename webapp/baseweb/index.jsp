@@ -1,5 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%
+	request.setCharacterEncoding("utf-8");
+%>
+<c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -10,25 +16,25 @@
     <meta name="description" content="Forest Hotel">
     <meta name="robot" content="all">
     <title>Forest Hotel</title>
-    <link rel="shortcut" href="images/forest-hotel-logo.ico">
+    <link rel="shortcut" href="${contextPath }/baseweb/images/forest-hotel-logo.ico">
 
     <!--폰트 링크-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Serif+KR&family=Noto+Sans+KR:wght@400;500&family=Reem+Kufi+Fun:wght@500&display=swap" rel="stylesheet">
     <!--JS-->
-    <script src="js/api-key.js"></script>
-    <script src="js/common.js"></script>
+    <script src="${contextPath }/baseweb/js/api-key.js"></script>
+    <script src="${contextPath }/baseweb/js/common.js"></script>
     <!--스와이퍼-->
-    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="${contextPath }/baseweb/js/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <script defer src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script defer src="js/swipper.js"></script>
 
     <!--CSS-->
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="${contextPath }/baseweb/css/common.css">
+    <link rel="stylesheet" href="${contextPath }/baseweb/css/index.css">
     
 </head>
 <body>
@@ -46,21 +52,21 @@
             <div class="swiper MainSwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide slide1">
-                        <img src="images/pakage-delight.jpg" alt="delight패키지 이미지">
+                        <img src="${contextPath }/baseweb/images/pakage-delight.jpg" alt="delight패키지 이미지">
                         <div class="info">
                             <h3>Delight Pakage</h3>
                             <p>함께하는 사람들과 야외풀에서 즐거운 시간을 가져보세요</p>
                         </div>
                     </div>
                     <div class="swiper-slide slide2">
-                        <img src="images/pakage-forest.png" alt="forest패키지 이미지">
+                        <img src="${contextPath }/baseweb/images/pakage-forest.png" alt="forest패키지 이미지">
                         <div class="info">
                             <h3>Forest Pakage</h3>
                             <p>포레스트의 뷔페와 함께 로맨틱한 시간을 가져보세요</p>
                         </div>
                     </div>
                     <div class="swiper-slide slide3">
-                        <img src="images/pakage-relax1.jpg" alt="relax패키지 이미지">
+                        <img src="${contextPath }/baseweb/images/pakage-relax1.jpg" alt="relax패키지 이미지">
                         <div class="info info3">
                             <h3>Relax Pakage</h3>
                             <p>포레스트만의 특별한 스파로 편안한 시간을 가져보세요</p>
@@ -84,7 +90,7 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="roomImage">
-                                    <img src="images/room-디럭스.jfif" alt="디럭스 룸 사진">
+                                    <img src="${contextPath }/baseweb/images/room-디럭스.jfif" alt="디럭스 룸 사진">
                                 </div>
                                 <div class="roomInfoParah">
                                     <p>
@@ -110,12 +116,12 @@
                                     </p>
                                 </div>
                                 <div class="roomImage">
-                                    <img src="images/room-프리미어.jfif" alt="프리미어 룸 사진">
+                                    <img src="${contextPath }/baseweb/images/room-프리미어.jfif" alt="프리미어 룸 사진">
                                 </div>  
                             </div>
                             <div class="swiper-slide">
                                 <div class="roomImage">
-                                    <img src="images/room-스위트.jfif" alt="스위트 룸 사진">
+                                    <img src="${contextPath }/baseweb/images/room-스위트.jfif" alt="스위트 룸 사진">
                                 </div>
                                 <div class="roomInfoParah">
                                     <p>
@@ -142,7 +148,7 @@
                 <div class="eventInfo">
                     <div class="event">
                         <div class="eventImg">
-                            <img src="images/event-BBQ.jpg" alt="글램핑 BBQ 사전 예약 이미지">
+                            <img src="${contextPath }/baseweb/images/event-BBQ.jpg" alt="글램핑 BBQ 사전 예약 이미지">
                         </div>
                         <p>그릴 X 포레스트</p>
                         <p>
@@ -152,7 +158,7 @@
                     </div>
                     <div class="event">
                         <div class="eventImg">
-                            <img src="images/event-진로.jpg" alt="일품 진로 이벤트 이미지">
+                            <img src="${contextPath }/baseweb/images/event-진로.jpg" alt="일품 진로 이벤트 이미지">
                         </div>
                         <p>드링크 with 일품진로</p>
                         <p>
@@ -162,7 +168,7 @@
                     </div>
                     <div class="event">
                         <div class="eventImg">
-                            <img src="images/event-goods.jpg" alt=" 예약 이미지">
+                            <img src="${contextPath }/baseweb/images/event-goods.jpg" alt=" 예약 이미지">
                         </div>
                         <p>포레스트 컬렉션</p>
                         <p>

@@ -1,5 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"
+    isELIgnored="false"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%
+	request.setCharacterEncoding("utf-8");
+%>
+<c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -10,7 +17,7 @@
     <meta name="description" content="Forest Hotel">
     <meta name="robot" content="all">
     <title>Forest Hotel</title>
-    <link rel="shortcut" href="images/forest-hotel-logo.ico">
+    <link rel="shortcut" href="${contextPath }/baseweb/images/forest-hotel-logo.ico">
 
     <!--폰트 링크-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,20 +25,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Changa:wght@500&family=Nanum+Gothic&family=Reem+Kufi+Fun:wght@500&display=swap" rel="stylesheet">
 
     <!--JS-->
-    <script src="js/api-key.js"></script>
-    <script src="js/join.js"></script>
-    <script src="js/common.js"></script>
-    
-    <!--스와이퍼-->
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-    <script defer src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <script defer src="js/swipper.js"></script>
+    <script type="text/javascript" src="${contextPath }/baseweb/js/api-key.js"></script>
+    <script type="text/javascript" src="${contextPath }/baseweb/js/join.js"></script>
+    <script type="text/javascript" src="${contextPath }/baseweb/js/common.js"></script>
 
     <!--CSS-->
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/join.css">
+    <link rel="stylesheet" href="${contextPath }/baseweb/css/common.css">
+    <link rel="stylesheet" href="${contextPath }/baseweb/css/join.css">
     
 </head>
 <body>
@@ -48,18 +48,18 @@
         <div id="contentsArea">
             <h2>회원가입</h2>
             <p>모든 항목을 입력해주세요</p>
-            <form action="/forest/joinController" method="post" id="joinForm" name="joinForm">
+            <form action="${contextPath }/member/addMemeber.do" method="post" id="joinForm" name="joinForm">
                 <fieldset>
                     <legend>회원정보 입력 폼</legend>
                     <div class="inputIdArea">
-                        <label for="userId">아이디</label><br>
-                        <input type="text" name="userId" id="userId" placeholder="영문, 숫자를 혼합하여 6자~15자">
+                        <label for="id">아이디</label><br>
+                        <input type="text" name="id" id="id" placeholder="영문, 숫자를 혼합하여 6자~15자">
                         <a href="#" class="userIdCheck">아이디 중복 확인</a>
                     </div>
                     <div class="inputPw">
                         <div class="inputPwArea">
-                            <label for="userPw">비밀번호</label><br>
-                            <input type="password" name="userPw" id="userPw" placeholder="영문, 숫자, 특수문자(@, !, *, #, ?, _) 8자~12자">
+                            <label for="password">비밀번호</label><br>
+                            <input type="password" name="password" id="password" placeholder="영문, 숫자, 특수문자(@, !, *, #, ?, _) 8자~12자">
                         </div>
                         <div class="inputPwCheckArea">
                             <label for="userPwCheck">비밀번호 확인</label><br>
@@ -68,34 +68,34 @@
                         </div>
                     </div>
                     <div class="inputNameArea">
-                        <label for="userName">이름</label><br>
-                        <input type="text" name="userName" id="userName">
+                        <label for="name">이름</label><br>
+                        <input type="text" name="name" id="name">
                     </div>
                     <div class="inputBirthArea">
-                        <label for="userBirth">생년월일</label><br>
-                        <input type="text" name="userBirthY" id="userBirthY" placeholder="1990">
-                        <input type="text" name="userBirthM" id="userBirthM" placeholder="01">
-                        <input type="text" name="userBirthD" id="userBirthD" placeholder="01">
+                        <label for="Birth">생년월일</label><br>
+                        <input type="text" name="birthY" id="birthY" placeholder="1990">
+                        <input type="text" name="birthM" id="birthM" placeholder="01">
+                        <input type="text" name="birthD" id="birthD" placeholder="01">
                         <p></p>
                     </div>
                     <div class="inputTelArea">
-                        <label for="userTel">전화번호</label><br>
-                        <input type="tel" name="userTel" id="userTel" placeholder="숫자만 11자리">
+                        <label for="tel">전화번호</label><br>
+                        <input type="tel" name="tel" id="tel" placeholder="숫자만 11자리">
                     </div>
                     <div class="inputInfo">
                         <div class="inputEmailArea">
-                            <label for="userEmailId">이메일</label><br>
-                            <input type="text" name="userEmailId" id="userEmailId" placeholder="example@forest.com">
+                            <label for="email">이메일</label><br>
+                            <input type="text" name="email" id="email" placeholder="example@forest.com">
                         </div>
                         <div class="inputReceiveArea">
-                            <label for="userInforeceiveEmail" id="userInforeceive">정보 수신 여부</label><br>
-                            <input type="checkbox" name="userInforeceiveEmail" id="userInforeceiveEmail" checked><label for="userInforeceiveEmail">이메일</label>
-                            <input type="checkbox" name="userInforeceiveSMS" id="userInforeceiveSMS" checked><label for="userInforeceiveSMS">SMS</label>
+                            <label id="userInforeceive">정보 수신 여부</label><br>
+                            <input type="checkbox" name="receiveEmail" id="receiveEmail" checked><label for="userInforeceiveEmail">이메일</label>
+                            <input type="checkbox" name="receiveSMS" id="receiveSMS" checked><label for="userInforeceiveSMS">SMS</label>
                         </div>
                     </div> 
                     <div class="btnJoinArea">
-                        <button type="submit" class="btnJoin">회원가입</button>
-                        <a href="index.jsp">취소</a>
+                        <button type="button" class="btnJoin" onclick="joinFormCheck()">회원가입</button>
+                        <a href="${contextPath }/baseweb/index.jsp">취소</a>
                     </div>
                 </fieldset>
             </form>

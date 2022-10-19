@@ -1,5 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%
+	request.setCharacterEncoding("utf-8");
+%>
+<c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,14 +20,14 @@
                 <ul class="globalMenuinner">
                     <li class="weather"><span></span><span></span><span></span></li>
                     <li class="clickLogin">로그인</li>
-                    <li><a href="join.jsp">회원가입</a></li>
+                    <li><a href="${contextPath }/baseweb/join.jsp">회원가입</a></li>
                 </ul>
             </div>
             <!--글로벌 메뉴 종료-->
 
             <div class="logoMenu">
                 <h1 class="logo">
-                    <a href="index.jsp">
+                    <a href="${contextPath }/baseweb/index.jsp">
                         Forest Hotel
                     </a>
                 </h1>
@@ -32,7 +38,7 @@
                         <h2 class="hidden">메인메뉴</h2>
                         <ul class="mainMenu" id="mainMenu">
                             <li>
-                                <a href="roomInfo.jsp">객실</a>
+                                <a href="${contextPath }/baseweb/roomInfo.jsp">객실</a>
                                 <ul class="roomInfoMenu underMenu">
                                     <li><a href="roomInfo.jsp">디럭스</a></li>
                                     <li><a href="roomInfo.jsp">패밀리</a></li>
@@ -40,7 +46,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="facilityInfo.jsp">부대시설</a>
+                                <a href="${contextPath }/baseweb/facilityInfo.jsp">부대시설</a>
                                 <ul class="facilityInfoMenu underMenu">
                                     <li><a href="facilityInfo.jsp">야외풀</a></li>
                                     <li><a href="facilityInfo.jsp">사우나</a></li>
@@ -49,7 +55,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="event.jsp">이벤트</a>
+                                <a href="${contextPath }/baseweb/event.jsp">이벤트</a>
                                 <ul class="eventMenu underMenu">
                                     <li><a href="event.jsp">패키지</a></li>
                                     <li><a href="event.jsp">프로모션</a></li>

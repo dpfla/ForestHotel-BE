@@ -13,6 +13,24 @@ public class MemberBean {
 	private String receiveemail;
 	private String receivesms;
 	private Date joinDate;
+	
+	public MemberBean(String id, String password, String name, Date birth, int tel, String email, String receiveemail, String receivesms) {
+		this.id=id;
+		this.password=password;
+		this.name=name;
+		this.birth=birth;
+		this.tel=tel;
+		this.email=email;
+		this.receiveemail=receiveemail;
+		this.receivesms=receivesms;
+	}
+	
+	public MemberBean(int num,String id, String password, String name, Date birth, int tel, String email, String receiveemail, String receivesms, Date joinDate) {
+		this(id, password, name, birth, tel, email, receiveemail, receivesms);
+		this.num=num;
+		this.joinDate=joinDate;
+	}
+	
 	public int getNum() {
 		return num;
 	}

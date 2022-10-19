@@ -48,7 +48,6 @@ window.onload = function(){
 
     /* 스크롤 */
     window.addEventListener("scroll", function() {
-        console.log("dd" + window.scrollX);
         document.querySelector("header").style.left = -1*window.scrollX + "px";
     });
     

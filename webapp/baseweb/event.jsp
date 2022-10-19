@@ -10,7 +10,7 @@
     <meta name="description" content="Forest Hotel">
     <meta name="robot" content="all">
     <title>Forest Hotel</title>
-    <link rel="shortcut" href="images/forest-hotel-logo.ico">
+    <link rel="shortcut" href="${contextPath }/baseweb/images/forest-hotel-logo.ico">
 
     <!--폰트 링크-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
