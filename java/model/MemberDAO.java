@@ -3,6 +3,7 @@ package model;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -56,5 +57,30 @@ public class MemberDAO {
 		} catch (Exception e) {
 			System.out.println("회원 등록 오류: " + e.getMessage());
 		}
+	}
+	
+	//아이디 중복 체크
+	public boolean overlappedID(String id) {
+		boolean result=false;
+		
+		try {
+			conn = dataFactory.getConnection();
+			String query = "select decode(count(*), 1, 'true', 'false') as result from forestmembertbl";
+			query += " where id=?";
+			
+			pstmt = conn.prepareStatement(query);
+			pstmt.setString(1, id);
+			ResultSet rs = pstmt.executeQuery();
+			rs.next();
+			result = Boolean.parseBoolean(rs.getString("result"));
+			System.out.println(result);
+			pstmt.close();
+			conn.close();
+			rs.close();
+		} catch (Exception e) {
+			System.out.println("overlappedID 실패: " + e.getMessage());
+		}
+		
+		return result;
 	}
 }

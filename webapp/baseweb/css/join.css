@@ -51,11 +51,15 @@ fieldset > div > div:first-child{
 #joinForm .inputIdArea #id{
     margin-right: 2rem;
 }
-#joinForm .inputIdArea a {
+#joinForm .inputIdArea button {
     font-size: 1rem;
     display: inline-block;
     background-color: rgba(29, 90, 32, 0.29);
     padding: 10px 40px;
+    border:none;
+}
+#joinForm .inputIdArea p {
+    margin: 0 1rem;
 }
 #joinForm .inputBirthArea #birthY{
     width: 18%;

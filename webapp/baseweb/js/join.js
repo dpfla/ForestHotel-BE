@@ -1,3 +1,33 @@
+let idChResult;
+
+function fn_idCheck(contextPath) {
+		let _id = $("#id").val();
+		if(_id == ""){
+			alert("중복 체크할 아이디를 입력하세요");
+			//서버에 넘겨주지 않기 위해 그냥 return 
+			return;
+		}
+		
+		$.ajax({
+			type: "post",
+			async: true,
+			dataType: "text",
+			url: contextPath+'/member/join/idCheck.do',
+			data: {id: _id},
+			success: function (data, textStatus) {
+				if(data == "usable"){
+					$(".inputIdArea>p").html("사용할 수 있는 ID입니다.").css("color", "blue");
+					$("#idDuplication").val("idCheck");
+				} else {
+					$(".inputIdArea>p").html("사용할 수 없는 ID입니다.").css("color", "red");
+					$("#idDuplication").val("idUncheck");
+				}
+			},
+			error: function (data, textStatus) {
+				alert("에러 발생");
+			}
+		});	
+	}
 
 function joinFormCheck (){
     let rexp = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,15}$/;
@@ -7,6 +37,12 @@ function joinFormCheck (){
         document.joinForm.id.focus();
         return false;
     }
+    
+    if(document.joinForm.idDuplication.value != "idCheck"){
+		alert("아이디 중복 체크를 해주세요");
+		document.joinForm.id.focus();
+		return false;
+	}
 
     rexp = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@!*#?_])[A-Za-z\d@!*#?_]{8,12}$/;
     result = rexp.test(document.joinForm.password.value);

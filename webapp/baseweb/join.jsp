@@ -25,6 +25,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Changa:wght@500&family=Nanum+Gothic&family=Reem+Kufi+Fun:wght@500&display=swap" rel="stylesheet">
 
     <!--JS-->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript" src="${contextPath }/baseweb/js/api-key.js"></script>
     <script type="text/javascript" src="${contextPath }/baseweb/js/join.js"></script>
     <script type="text/javascript" src="${contextPath }/baseweb/js/common.js"></script>
@@ -53,8 +54,10 @@
                     <legend>회원정보 입력 폼</legend>
                     <div class="inputIdArea">
                         <label for="id">아이디</label><br>
-                        <input type="text" name="id" id="id" placeholder="영문, 숫자를 혼합하여 6자~15자">
-                        <a href="#" class="userIdCheck">아이디 중복 확인</a>
+                        <input type="text" name="id" id="id" placeholder="영문, 숫자를 혼합하여 6자~15자" onchange="$('#idDuplication').val('idUncheck');">
+                        <button type="button" class="userIdCheck" onclick="fn_idCheck(`${contextPath}`);">아이디 중복 확인</button>
+                        <input type="hidden" id="idDuplication" value="idUncheck">
+                        <p></p>
                     </div>
                     <div class="inputPw">
                         <div class="inputPwArea">

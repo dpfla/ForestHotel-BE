@@ -36,6 +36,13 @@
     <link rel="stylesheet" href="${contextPath }/baseweb/css/common.css">
     <link rel="stylesheet" href="${contextPath }/baseweb/css/index.css">
     
+	<c:if test="${msg=='addMember' }">
+		<script>
+			window.onload=function() {
+				alert("회원을 등록했습니다");
+			}	
+		</script>
+	</c:if>
 </head>
 <body>
     <!--건너뛰기 링크-->
