@@ -1,0 +1,77 @@
+@charset "utf-8";
+#contentsArea{
+    margin: 100px auto;
+}
+#contentsArea h2{
+    font-size: 1.7rem;
+    font-family: "Noto Sans", sans-serif;
+    padding: 3rem 0 2.2rem;
+    font-weight: 400;
+}
+div.noticeHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+div.noticeHeader > input {
+    font-size: 2rem;
+    display:inline-block;
+    width: 50%;
+    color: #000;
+    outline: none;
+    border: none;
+}
+div.noticeHeader > input.mod, textarea.noticeContent.mod {
+	border: 1px solid #333;
+	border-radius: 3px;
+	padding: 5px;
+}
+textarea.noticeContent.mod {
+	padding: 10px;	
+}
+textarea.noticeContent {
+    text-align: left;
+    width: 90%;
+    margin: 1rem auto;
+    box-sizing: border-box;
+    min-height: 230px;
+    padding: 1rem 1rem 2rem;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    letter-spacing: 1.5;
+    outline: none;
+    border: none;
+    font-family:"";
+    resize: none;
+}
+div.noticeArea {
+    text-align: center;
+}
+div.btnArea {
+	text-align: center;
+}
+div.btnArea > div {
+	display:inline;
+}
+div.btnArea > div.hidden {
+	display: none;
+}
+div.btnArea a, div.btnArea input {
+	width: 150px;
+	height: 44px;
+	vertical-align: middle;
+	margin: 0 1rem;
+    padding: 0.8rem 3rem;
+    font-size: 1.2rem;
+    background-color: rgb(29, 90, 32);
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border: 1px solid rgb(29, 90, 32);
+    color: #fff;
+}

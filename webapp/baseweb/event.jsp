@@ -1,5 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%
+	request.setCharacterEncoding("utf-8");
+%>
+<c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -18,18 +24,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Changa:wght@500&family=Nanum+Gothic&family=Reem+Kufi+Fun:wght@500&display=swap" rel="stylesheet">
 
     <!--JS-->
-    <script src="js/api-key.js"></script>
-    <script src="js/common.js"></script>
+    <script src="${contextPath }/baseweb/js/api-key.js"></script>
+    <script src="${contextPath }/baseweb/js/common.js"></script>
     <!--스와이퍼-->
-    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="${contextPath }/baseweb/js/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <script defer src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <script defer src="js/swipper.js"></script>
+    <script defer src="${contextPath }/baseweb/js/swipper.js"></script>
 
     <!--CSS-->
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/event.css">
+    <link rel="stylesheet" href="${contextPath }/baseweb/css/common.css">
+    <link rel="stylesheet" href="${contextPath }/baseweb/css/event.css">
     
 </head>
 <body>
@@ -48,7 +54,7 @@
             <div class="event-flexBox">
                 <div class="event">
                     <div class="event-img">
-                        <img src="images/event-BBQ.jpg" alt="글램핑 BBQ 사전 예약 이미지">
+                        <img src="${contextPath }/baseweb/images/event-BBQ.jpg" alt="글램핑 BBQ 사전 예약 이미지">
                     </div>
                     <p>
                         <span class="event-title">그릴 X 포레스트</span><br>
@@ -57,7 +63,7 @@
                 </div>
                 <div class="event">
                     <div class="event-img">
-                        <img src="images/event-진로.jpg" alt="일품 진로 이벤트 이미지">
+                        <img src="${contextPath }/baseweb/images/event-진로.jpg" alt="일품 진로 이벤트 이미지">
                     </div>
                     <p>
                         <span class="event-title">스테이 앤 드링크 with 일품진로</span><br>
@@ -66,7 +72,7 @@
                 </div>
                 <div class="event">
                     <div class="event-img">
-                        <img src="images/event-goods.jpg" alt=" 예약 이미지">
+                        <img src="${contextPath }/baseweb/images/event-goods.jpg" alt=" 예약 이미지">
                     </div>
                     <p>
                         <span class="event-title">포레스트 컬렉션</span><br>

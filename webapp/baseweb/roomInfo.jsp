@@ -1,5 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%
+	request.setCharacterEncoding("utf-8");
+%>
+<c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -10,7 +16,7 @@
     <meta name="description" content="Forest Hotel">
     <meta name="robot" content="all">
     <title>Forest Hotel</title>
-    <link rel="shortcut" href="images/forest-hotel-logo.ico">
+    <link rel="shortcut" href="${contextPath }/images/forest-hotel-logo.ico">
 
     <!--폰트 링크-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,18 +24,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Serif+KR&family=Noto+Sans+KR:wght@400;500&family=Reem+Kufi+Fun:wght@500&display=swap" rel="stylesheet">
 
     <!--JS-->
-    <script src="js/api-key.js"></script>
-    <script src="js/common.js"></script>
+    <script src="${contextPath }/baseweb/js/api-key.js"></script>
+    <script src="${contextPath }/baseweb/js/common.js"></script>
     <!--스와이퍼-->
-    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="${contextPath }/baseweb/js/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <script defer src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <script defer src="js/swipper.js"></script>
+    <script defer src="${contextPath }/baseweb/js/swipper.js"></script>
 
     <!--CSS-->
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/roomInfo.css">
+    <link rel="stylesheet" href="${contextPath }/baseweb/css/common.css">
+    <link rel="stylesheet" href="${contextPath }/baseweb/css/roomInfo.css">
     
 </head>
 <body>
@@ -51,7 +57,7 @@
                 <p>모던하면서 아늑한 인테리어가 돋보이는 객실</p>
                 <div class="roomInfo-all">
                     <div class="roomInfo-img">
-                        <img src="images/room-디럭스.jfif" alt="디럭스 객실 사진">
+                        <img src="${contextPath }/baseweb/images/room-디럭스.jfif" alt="디럭스 객실 사진">
                     </div>
                     <div class="roomInfo-parah">
                         <h3>디럭스 포레스트</h3>
@@ -69,7 +75,7 @@
                 <p>편안한 분위기의 침실과 우아한 감성의 거실</p>
                 <div class="roomInfo-all">
                     <div class="roomInfo-img">
-                        <img src="images/room-프리미어.jfif" alt="프리미어 객실 사진">
+                        <img src="${contextPath }/baseweb/images/room-프리미어.jfif" alt="프리미어 객실 사진">
                     </div>
                     <div class="roomInfo-parah">
                         <h3>프리미어 포레스트</h3>
@@ -87,7 +93,7 @@
                 <p>편안한 침실과 안락한 거실이 분리되어 있는 객실</p>
                 <div class="roomInfo-all">
                     <div class="roomInfo-img">
-                        <img src="images/room-스위트.jfif" alt="스위트 객실 사진">
+                        <img src="${contextPath }/baseweb/images/room-스위트.jfif" alt="스위트 객실 사진">
                     </div>
                     <div class="roomInfo-parah">
                         <h3>럭셔리 포레스트</h3>

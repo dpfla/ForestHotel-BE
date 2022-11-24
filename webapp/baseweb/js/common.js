@@ -53,7 +53,7 @@ window.onload = function(){
     
     /* 로그인 폼 */
     const loginForm = document.querySelector("header .loginForm");
-    const li = document.querySelector("header .clickLogin");
+    const li = document.querySelector("header #loginClick");
     const animateHide = [
         {color: "rgba(255, 255, 255, 1)"}, 
         {color: "rgba(255, 255, 255, 0)"}
@@ -67,35 +67,36 @@ window.onload = function(){
         {color: "rgba(255, 255, 255, 1)", backgroundColor: "rgb(0, 0, 0)"}
     ];
     const animateTiming = {duration: 200, iterations: 1};
-    li.addEventListener("click", function() {
-        if(loginForm.style.display === "none" || loginForm.style.display === ""){
-            
-
-            li.animate(animateHide, animateTiming);
-            setTimeout(function() {
-                li.innerText = "창닫기";
-            }, 100);
-            li.animate(animateblockShow, animateTiming);
-            setTimeout(function() {
-                li.style.color = "rgba(255, 255, 255, 1)";
-                li.style.backgroundColor = "rgb(29, 90, 32)";
-                loginForm.style.display = "block";
-            }, 200);
-            
-        } else if(loginForm.style.display === "block"){
-            
-
-            li.animate(animateHide, animateTiming);
-            setTimeout(function() {
-                li.innerText = "로그인";
-            }, 100);
-            li.animate(animatenoneShow, animateTiming);
-            setTimeout(function() {
-                li.style.color = "rgba(255, 255, 255, 1)";
-                li.style.backgroundColor = "rgb(0, 0, 0)";
-                loginForm.style.display = "none";
-            }, 200);
-        }
-    });
-
+    if(li){
+	    li.addEventListener("click", function() {
+	        if(loginForm.style.display === "none" || loginForm.style.display === ""){
+	            
+	
+	            li.animate(animateHide, animateTiming);
+	            setTimeout(function() {
+	                li.innerText = "창닫기";
+	            }, 100);
+	            li.animate(animateblockShow, animateTiming);
+	            setTimeout(function() {
+	                li.style.color = "rgba(255, 255, 255, 1)";
+	                li.style.backgroundColor = "rgb(29, 90, 32)";
+	                loginForm.style.display = "block";
+	            }, 200);
+	            
+	        } else if(loginForm.style.display === "block"){
+	            
+	
+	            li.animate(animateHide, animateTiming);
+	            setTimeout(function() {
+	                li.innerText = "로그인";
+	            }, 100);
+	            li.animate(animatenoneShow, animateTiming);
+	            setTimeout(function() {
+	                li.style.color = "rgba(255, 255, 255, 1)";
+	                li.style.backgroundColor = "rgb(0, 0, 0)";
+	                loginForm.style.display = "none";
+	            }, 200);
+	        }
+	    });
+	}
 }

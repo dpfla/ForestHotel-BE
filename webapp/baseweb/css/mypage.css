@@ -1,0 +1,133 @@
+#contentsArea{
+    margin: 100px auto;
+}
+#contentsArea > h2{
+    font-size: 2.2rem;
+    font-family: "Noto Sans", sans-serif;
+    padding: 3rem 0;
+    font-weight: 400;
+}
+#contentsArea > h3 {
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #333;
+    text-align: center;
+    box-sizing: border-box;
+}
+#contentsArea > form {
+    display: inline-block;
+    vertical-align: top;
+    width: 79%;
+    border-left: 1px solid #d0d0d0;
+    padding: 1.5rem;
+    box-sizing: border-box;
+}
+#contentsArea > form > fieldset {
+    border: none;
+}
+#contentsArea > form > fieldset > div {
+    margin: 0.7rem 0;
+}
+form input:not([type="checkbox"], [type="button"]) {
+    width: 60%;
+    padding: 0.7rem;
+    border-radius: 3px;
+    color: #212121;
+    outline: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+form input:not([type="checkbox"], [type="button"], :read-only):focus {
+    outline: 1px solid rgba(45, 137, 49, 0.7);
+}
+form input:read-only{
+    background-color: #eee;
+}
+form input:disabled{
+    border: 1px solid #ddd;
+    color: #555;
+}
+form input:not(:disabled){
+    border: 1px solid #666;
+}
+
+form label{
+    display: inline-block;
+    width: 19%;
+    padding: 1rem 0 1rem 1.2rem;
+    box-sizing: border-box;
+}
+div.inputBirthArea input#userBirthM {
+    margin: 0 0.5rem;
+}
+div.inputBirthArea input#userBirthY {
+    width: 22.5%;
+}
+div.inputBirthArea input:not([id="userBirthY"]) {
+    width: 15%;
+} 
+div.inputReceiveArea > label:nth-child(n+2) {
+    width: 7%;
+}
+div.inputReceiveArea > input[name="userInforeceiveSMS"]{
+    margin-left: 4rem;
+}
+div.inputReceiveArea > input {
+    width: 3%;
+    transform: scale(1.4);
+    -webkit-transform: scale(1.4);
+    -moz-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    -o-transform: scale(1.4);
+}
+.btnArea {
+    text-align: right;
+    padding-top: 20px;
+    padding-right: 18%;
+}
+.btnArea input[type="button"] {
+    width: 120px;
+    height: 40px;
+    box-sizing: border-box;
+    color: #212121;
+    font-size: 1.1rem;
+    background-color: rgba(29, 90, 32, 0.1);
+    border: 1px solid rgb(29, 90, 32);
+    color: rgb(29, 90, 32);
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+.btnArea input[type="button"]:hover {
+    background-color: rgb(29, 90, 32);
+    color: #fff;
+}
+.btnArea a {
+    display: inline-block;
+    padding: 0.7rem;
+    text-align: center;
+    width: 120px;
+    height: 40px;
+    font-size: 1.1rem;
+    margin-left: 10px;
+    box-sizing: border-box;
+    color: #212121;
+    background-color: #eee;
+    border: 1px solid #777;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+.btnArea a:hover{
+    background-color: #777;
+    color: #fff;
+}

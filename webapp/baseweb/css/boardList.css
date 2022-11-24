@@ -1,0 +1,57 @@
+@charset "utf-8";
+#contentsArea{
+    margin: 100px auto;
+}
+#contentsArea > h2{
+    font-size: 2.2rem;
+    font-family: "Noto Sans", sans-serif;
+    padding: 3rem 0;
+    font-weight: 400;
+}
+.noticeTable {
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.noticeTable th, td {
+    padding: 15px 24px;
+}
+.noticeTable thead > tr {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    background-color: #eee;
+}
+.noticeTable tr {
+    border-bottom: 1px solid #ddd;
+}
+.noticeTable tr>th:nth-child(1), 
+.noticeTable tr>td:nth-child(1) {
+    width: 10%;
+    text-align: center;
+}
+.noticeTable tr>th:nth-child(2), 
+.noticeTable tr>td:nth-child(2) {
+    width: 70%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 15px 30px;
+}
+.noticeTable tr>th:nth-child(3), 
+.noticeTable tr>td:nth-child(3) {
+    width: 15%;
+    text-align: center;
+}
+.pagingArea {
+    margin: 40px 0;
+    text-align: center;
+}
+.pagingArea a.selected, .pagingArea a:hover {
+    color: rgba(0, 72, 4, 0.6);
+    text-decoration: underline;
+}
+.pagingArea a {
+    padding: 5px;
+    margin: 5px;
+}

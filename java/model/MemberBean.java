@@ -14,15 +14,24 @@ public class MemberBean {
 	private String receivesms;
 	private Date joinDate;
 	
-	public MemberBean(String id, String password, String name, Date birth, int tel, String email, String receiveemail, String receivesms) {
+	public MemberBean() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public MemberBean(String id, String password, int tel, String email, String receiveemail, String receivesms) {
 		this.id=id;
 		this.password=password;
-		this.name=name;
-		this.birth=birth;
 		this.tel=tel;
 		this.email=email;
 		this.receiveemail=receiveemail;
 		this.receivesms=receivesms;
+	}
+	
+	public MemberBean(String id, String password, String name, Date birth, int tel, String email, String receiveemail, String receivesms) {
+		this(id, password, tel, email, receiveemail, receivesms);
+		this.name=name;
+		this.birth=birth;
+		
 	}
 	
 	public MemberBean(int num,String id, String password, String name, Date birth, int tel, String email, String receiveemail, String receivesms, Date joinDate) {

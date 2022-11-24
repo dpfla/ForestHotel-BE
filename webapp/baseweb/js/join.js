@@ -12,14 +12,15 @@ function fn_idCheck(contextPath) {
 			type: "post",
 			async: true,
 			dataType: "text",
-			url: contextPath+'/member/join/idCheck.do',
+			url: contextPath+'/member/idCheck.do',
 			data: {id: _id},
 			success: function (data, textStatus) {
-				if(data == "usable"){
-					$(".inputIdArea>p").html("사용할 수 있는 ID입니다.").css("color", "blue");
+				let result = data.split(",");
+				if(result[0] == "usable"){
+					$(".inputIdArea>p").html(result[1] + "은 사용할 수 있는 ID입니다.").css("color", "blue");
 					$("#idDuplication").val("idCheck");
 				} else {
-					$(".inputIdArea>p").html("사용할 수 없는 ID입니다.").css("color", "red");
+					$(".inputIdArea>p").html(result[1] + "은 사용할 수 없는 ID입니다.").css("color", "red");
 					$("#idDuplication").val("idUncheck");
 				}
 			},

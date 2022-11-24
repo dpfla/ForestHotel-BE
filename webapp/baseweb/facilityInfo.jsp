@@ -1,5 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%
+	request.setCharacterEncoding("utf-8");
+%>
+<c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -10,7 +16,7 @@
     <meta name="description" content="Forest Hotel">
     <meta name="robot" content="all">
     <title>Forest Hotel</title>
-    <link rel="shortcut" href="images/forest-hotel-logo.ico">
+    <link rel="shortcut" href="${contextPath }/images/forest-hotel-logo.ico">
 
     <!--폰트 링크-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,18 +24,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Changa:wght@500&family=Nanum+Gothic&family=Reem+Kufi+Fun:wght@500&display=swap" rel="stylesheet">
 
     <!--JS-->
-    <script src="js/api-key.js"></script>
-    <script src="js/common.js"></script>
+    <script src="${contextPath }/baseweb/js/api-key.js"></script>
+    <script src="${contextPath }/baseweb/js/common.js"></script>
     <!--스와이퍼-->
-    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="${contextPath }/baseweb/js/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <script defer src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <script defer src="js/swipper.js"></script>
+    <script defer src="${contextPath }/baseweb/js/swipper.js"></script>
 
     <!--CSS-->
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/facilityInfo.css">
+    <link rel="stylesheet" href="${contextPath }/baseweb/css/common.css">
+    <link rel="stylesheet" href="${contextPath }/baseweb/css/facilityInfo.css">
     
 </head>
 <body>
@@ -51,7 +57,7 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="facilityInfoParahImg">
-                                <img src="images/facility-수영장.jpg" alt="야외풀사진">
+                                <img src="${contextPath }/baseweb/images/facility-수영장.jpg" alt="야외풀사진">
                             </div>
                             <div class="facilityInfoParah">
                                 <h3>야외 풀</h3>
@@ -67,7 +73,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="facilityInfoParahImg">
-                                <img src="images/facility-사우나.jpg" alt="사우나 사진">
+                                <img src="${contextPath }/baseweb/images/facility-사우나.jpg" alt="사우나 사진">
                             </div>
                             <div class="facilityInfoParah">
                                 <h3>실내 사우나</h3>
@@ -81,7 +87,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="facilityInfoParahImg">
-                                <img src="images/facility-스파.jpg" alt="스파 사진">
+                                <img src="${contextPath }/baseweb/images/facility-스파.jpg" alt="스파 사진">
                             </div>
                             <div class="facilityInfoParah">
                                 <h3>스파</h3>
@@ -97,7 +103,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="facilityInfoParahImg">
-                                <img src="images/facility-피트니스.jpg" alt="피트니스 사진">
+                                <img src="${contextPath }/baseweb/images/facility-피트니스.jpg" alt="피트니스 사진">
                             </div>
                             <div class="facilityInfoParah">
                                 <h3>피트니스</h3>

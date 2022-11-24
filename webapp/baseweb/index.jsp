@@ -30,7 +30,7 @@
     <link rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <script defer src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <script defer src="js/swipper.js"></script>
+    <script defer src="${contextPath }/baseweb/js/swipper.js"></script>
 
     <!--CSS-->
     <link rel="stylesheet" href="${contextPath }/baseweb/css/common.css">
@@ -40,6 +40,13 @@
 		<script>
 			window.onload=function() {
 				alert("회원을 등록했습니다");
+			}	
+		</script>
+	</c:if>
+	<c:if test="${msg=='deleteTrue' }">
+		<script>
+			window.onload=function() {
+				alert("회원탈퇴되었습니다.");
 			}	
 		</script>
 	</c:if>
